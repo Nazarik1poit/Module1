@@ -83,12 +83,16 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(241, 302);
+            ClientSize = new Size(241, 272);
             Controls.Add(domainUpDown2);
             Controls.Add(domainUpDown1);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            MaximizeBox = false;
+            MaximumSize = new Size(259, 319);
+            MinimizeBox = false;
+            MinimumSize = new Size(259, 319);
             Name = "Form1";
             Text = "FtoC";
             ResumeLayout(false);
