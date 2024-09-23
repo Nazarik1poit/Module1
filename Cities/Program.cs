@@ -1,13 +1,16 @@
-﻿string[] towns = ["Рейкъявик", "Уфа", "Витебск", "Борисов", "Бразилиа"];
-Console.WriteLine("Введите название города");
-string input = Console.ReadLine();
-for (int i = 0; i < towns.Length; i++)
+﻿while (true)
 {
-    if (input == towns[i])
+    string[] towns = ["Рейкъявик", "Уфа", "Витебск", "Борисов", "Бразилиа"];
+    Console.WriteLine("Введите название города");
+    string input = Console.ReadLine();
+    for (int i = 0; i < towns.Length; i++)
     {
-        Console.WriteLine($"Вы угадали! {input} находиться на {i} позиции в списке.");
-        Console.ReadKey();
-        Environment.Exit(0);
+        if (input == towns[i])
+        {
+            Console.WriteLine($"Вы угадали! {input} находиться на {i} позиции в списке.");
+            Console.ReadKey();
+            break;
+        }
     }
+    Console.WriteLine("Вы не угадали, попробуйте ещё раз");
 }
-Console.WriteLine("Вы не угадали, попробуйте ещё раз");
