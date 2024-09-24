@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarenheitToCelcius", "Faren
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenOrNot", "EvenOrNot\EvenOrNot.csproj", "{365B8074-91D3-49E0-A842-688123C2C804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeOrNot", "PalindromeOrNot\PalindromeOrNot.csproj", "{E822F421-AD0A-4C63-9B87-CA86B8F337BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PalindromeOrNot", "PalindromeOrNot\PalindromeOrNot.csproj", "{E822F421-AD0A-4C63-9B87-CA86B8F337BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cities", "Cities\Cities.csproj", "{0E126481-DE80-4AF9-A9BD-5C03B483C766}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cities", "Cities\Cities.csproj", "{0E126481-DE80-4AF9-A9BD-5C03B483C766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RussianRoullete", "RussianRoullete\RussianRoullete.csproj", "{58629636-FB8D-4249-9A3C-B984D15533D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RussianRoullete", "RussianRoullete\RussianRoullete.csproj", "{58629636-FB8D-4249-9A3C-B984D15533D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_6", "Task_6\Task_6.csproj", "{BE8299FF-A819-4B15-AF0F-C5FF84DC0716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{58629636-FB8D-4249-9A3C-B984D15533D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58629636-FB8D-4249-9A3C-B984D15533D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58629636-FB8D-4249-9A3C-B984D15533D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8299FF-A819-4B15-AF0F-C5FF84DC0716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8299FF-A819-4B15-AF0F-C5FF84DC0716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8299FF-A819-4B15-AF0F-C5FF84DC0716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8299FF-A819-4B15-AF0F-C5FF84DC0716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
