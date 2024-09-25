@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 class Program
 {
@@ -22,19 +21,20 @@ class Program
 
         // Выводим исходную матрицу
         Console.WriteLine("Исходная матрица:");
-        PrintMatrix(matrix, size);
+        PrintMatrix(matrix);
 
         // Упорядочиваем строки по возрастанию суммы элементов
-        SortMatrixRowsBySum(ref matrix, size);
+        SortMatrixRowsBySum(matrix);
 
         // Выводим отсортированную матрицу
         Console.WriteLine("\nОтсортированная матрица:");
-        PrintMatrix(matrix, size);
+        PrintMatrix(matrix);
     }
 
     // Метод для вывода матрицы на экран
-    static void PrintMatrix(int[,] matrix, int size)
+    static void PrintMatrix(int[,] matrix)
     {
+        int size = matrix.GetLength(0); // Получаем размер матрицы
         for (int i = 0; i < size; i++)
         {
             for (int j = 0; j < size; j++)
@@ -46,32 +46,40 @@ class Program
     }
 
     // Метод для сортировки строк матрицы по суммам элементов
-    static void SortMatrixRowsBySum(ref int[,] matrix, int size)
+    static void SortMatrixRowsBySum(int[,] matrix)
     {
-        // Создаем временный массив для хранения строк и их сумм
-        var rowsWithSums = new Tuple<int[], int>[size];
+        int size = matrix.GetLength(0);
+        int[] rowSums = new int[size];
 
+        // Вычисляем суммы строк
         for (int i = 0; i < size; i++)
         {
-            int[] row = new int[size];
             for (int j = 0; j < size; j++)
             {
-                row[j] = matrix[i, j];
+                rowSums[i] += matrix[i, j]; // Суммируем элементы строки
             }
-            int sum = row.Sum(); // Вычисляем сумму строки
-            rowsWithSums[i] = new Tuple<int[], int>(row, sum);
         }
 
-        // Сортируем строки по возрастанию их сумм
-        var sortedRows = rowsWithSums.OrderBy(row => row.Item2).ToArray();
-
-        // Записываем отсортированные строки обратно в матрицу
-        for (int i = 0; i < size; i++)
+        // Сортируем строки на основе их сумм
+        for (int i = 0; i < size - 1; i++)
         {
-            int[] sortedRow = sortedRows[i].Item1;
-            for (int j = 0; j < size; j++)
+            for (int j = i + 1; j < size; j++)
             {
-                matrix[i, j] = sortedRow[j];
+                if (rowSums[i] > rowSums[j])
+                {
+                    // Меняем местами суммы
+                    int tempSum = rowSums[i];
+                    rowSums[i] = rowSums[j];
+                    rowSums[j] = tempSum;
+
+                    // Меняем местами строки матрицы
+                    for (int k = 0; k < size; k++)
+                    {
+                        int tempValue = matrix[i, k];
+                        matrix[i, k] = matrix[j, k];
+                        matrix[j, k] = tempValue;
+                    }
+                }
             }
         }
     }
